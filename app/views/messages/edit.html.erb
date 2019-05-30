@@ -1,0 +1,11 @@
+<div class="contents row">
+  <%= form_for @message do |f| %>
+      <p>
+        編集する
+      </p>
+    <%= f.text_area :body, placeholder: "text", style: "cols: 30px;rows: 10px;" %>
+    <%= button_tag type: "submit", class: "btn btn--block" do %>
+    send
+    <% end %>
+  <% end %>
+</div>

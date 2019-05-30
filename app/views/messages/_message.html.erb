@@ -1,0 +1,15 @@
+<div class="box">
+    <div class="text"><%= message.body %></div>
+    <div class="name"><%= message.user.name %></div> 
+
+   <ul>
+    <% if user_signed_in? && current_user.id == message.user_id %>
+      <li>
+        <%= link_to '編集', "/messages/#{message.id}/edit", method: :get %>
+      </li>
+      <li>
+        <%= link_to '削除', "/messages/#{message.id}", method: :delete %>
+      </li>
+    <% end %>
+   </ul>
+</div>
